@@ -7,7 +7,7 @@ RUN apt update && apt install -y \
     build-essential gfortran makedepf90 \
     python3-pip python3-venv python-dev && \
     rm -rf /var/lib/apt/lists/*
-RUN pip3 --no-cache-dir install ford FoBiS.py pygooglechart
+RUN pip3 --no-cache-dir install ford FoBiS.py pygooglechart sh
 
 COPY ../* /
-ENTRYPOINT ["/test.sh"]
+ENTRYPOINT ["python3 ./test_all.py"]
