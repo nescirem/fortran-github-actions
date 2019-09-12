@@ -9,5 +9,5 @@ RUN apt update && apt install -y \
     rm -rf /var/lib/apt/lists/*
 RUN pip3 --no-cache-dir install ford FoBiS.py pygooglechart sh
 
-COPY ../* /
-ENTRYPOINT ["python3 ./test_all.py"]
+COPY ../test_all.py /test_all.py
+ENTRYPOINT ["python3 /test_all.py"]
